@@ -1,0 +1,14 @@
+c:\users\andree avalos\source\repos\WebApplication2\WebApplication2\bin\Release\netcoreapp2.1\WebApplication2.deps.json
+c:\users\andree avalos\source\repos\WebApplication2\WebApplication2\bin\Release\netcoreapp2.1\WebApplication2.runtimeconfig.json
+c:\users\andree avalos\source\repos\WebApplication2\WebApplication2\bin\Release\netcoreapp2.1\WebApplication2.runtimeconfig.dev.json
+c:\users\andree avalos\source\repos\WebApplication2\WebApplication2\bin\Release\netcoreapp2.1\WebApplication2.dll
+c:\users\andree avalos\source\repos\WebApplication2\WebApplication2\bin\Release\netcoreapp2.1\WebApplication2.pdb
+c:\users\andree avalos\source\repos\WebApplication2\WebApplication2\obj\Release\netcoreapp2.1\WebApplication2.csprojAssemblyReference.cache
+c:\users\andree avalos\source\repos\WebApplication2\WebApplication2\obj\Release\netcoreapp2.1\WebApplication2.csproj.CoreCompileInputs.cache
+c:\users\andree avalos\source\repos\WebApplication2\WebApplication2\obj\Release\netcoreapp2.1\WebApplication2.RazorAssemblyInfo.cache
+c:\users\andree avalos\source\repos\WebApplication2\WebApplication2\obj\Release\netcoreapp2.1\WebApplication2.RazorAssemblyInfo.cs
+c:\users\andree avalos\source\repos\WebApplication2\WebApplication2\obj\Release\netcoreapp2.1\WebApplication2.AssemblyInfoInputs.cache
+c:\users\andree avalos\source\repos\WebApplication2\WebApplication2\obj\Release\netcoreapp2.1\WebApplication2.AssemblyInfo.cs
+c:\users\andree avalos\source\repos\WebApplication2\WebApplication2\obj\Release\netcoreapp2.1\WebApplication2.RazorTargetAssemblyInfo.cache
+c:\users\andree avalos\source\repos\WebApplication2\WebApplication2\obj\Release\netcoreapp2.1\WebApplication2.dll
+c:\users\andree avalos\source\repos\WebApplication2\WebApplication2\obj\Release\netcoreapp2.1\WebApplication2.pdb
