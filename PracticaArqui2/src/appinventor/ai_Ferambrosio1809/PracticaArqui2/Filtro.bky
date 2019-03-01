@@ -1,0 +1,1573 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="global_declaration" id="$}PxU0?~!+opAiqS751," x="36" y="23">
+    <field name="NAME">lista</field>
+    <value name="VALUE">
+      <block type="lists_create_with" id="./!%Oa5*8|TCHh3hK8sD">
+        <mutation items="0"></mutation>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="yC7Ty!ZTSoKP=.RpAz}." x="386" y="26">
+    <field name="NAME">n</field>
+    <value name="VALUE">
+      <block type="math_number" id="O;^^fR2y(%(/k1m9_RZ#">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="^I+7z.4rlAa;?1e4#wgB" x="37" y="58">
+    <mutation component_type="Web" instance_name="Web1" event_name="GotText"></mutation>
+    <field name="COMPONENT_SELECTOR">Web1</field>
+    <statement name="DO">
+      <block type="lexical_variable_set" id="*7m!5s{kX;qHnVx9/`W9">
+        <field name="VAR">global lista</field>
+        <value name="VALUE">
+          <block type="component_method" id="Vlu[y-qd~)g~vneVg8O0">
+            <mutation component_type="Web" method_name="JsonTextDecode" is_generic="false" instance_name="Web1"></mutation>
+            <field name="COMPONENT_SELECTOR">Web1</field>
+            <value name="ARG0">
+              <block type="lexical_variable_get" id="$+5,)jyr@a/=`xKOMIB~">
+                <mutation>
+                  <eventparam name="responseContent"></eventparam>
+                </mutation>
+                <field name="VAR">responseContent</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="Uc+~~T(6tXZA^prucs=6" x="703" y="51">
+    <field name="NAME">texto</field>
+    <value name="VALUE">
+      <block type="text" id="UJy#*2dTb)Cxl!t=8V?%">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="9u`Q}RdLbl`DdVtza|7T" x="38" y="181">
+    <mutation component_type="Button" instance_name="Button3" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button3</field>
+    <statement name="DO">
+      <block type="component_set_get" id="ASxxN)rRqT@$^p3ppgc`">
+        <mutation component_type="Web" set_or_get="set" property_name="Url" is_generic="false" instance_name="Web1"></mutation>
+        <field name="COMPONENT_SELECTOR">Web1</field>
+        <field name="PROP">Url</field>
+        <value name="VALUE">
+          <block type="text" id="%O-FLE@:hPMCH|a()K:c">
+            <field name="TEXT">https://practica1-ace2.azurewebsites.net/api/medicion</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="-FF}vJsv6NFpkl]U@)B6">
+            <mutation component_type="Web" method_name="Get" is_generic="false" instance_name="Web1"></mutation>
+            <field name="COMPONENT_SELECTOR">Web1</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="sty|i%h1lb$D]dcKjXc;" x="21" y="341">
+    <mutation component_type="Button" instance_name="Button1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button1</field>
+    <statement name="DO">
+      <block type="lexical_variable_set" id="r:uN8gR=vS}mcDaz]hA2">
+        <field name="VAR">global n</field>
+        <value name="VALUE">
+          <block type="math_subtract" id="`@h2]E0AMU=*^qtsd1$+">
+            <value name="A">
+              <block type="lexical_variable_get" id="-K-C-qvOK8fZJ0~gD(^O">
+                <field name="VAR">global n</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="aS|j2TpE#([v4kno!imh">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="xc[rrqkU+@[TJ/0z6ZM(">
+            <value name="IF0">
+              <block type="math_compare" id="{aG71CDZ+`LUQq937yLI">
+                <field name="OP">LTE</field>
+                <value name="A">
+                  <block type="lexical_variable_get" id="6;01eKj6Ejm#q!Jp(/*M">
+                    <field name="VAR">global n</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="y5Qw[66=.ko9TtR.J`W1">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="lexical_variable_set" id="g{q6Wd}L5o)Xec0:(!m~">
+                <field name="VAR">global n</field>
+                <value name="VALUE">
+                  <block type="math_number" id="k}DVBE_@:y-8I$%(zEuF">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="procedures_callnoreturn" id="Z`Uxw@G|`QogJ=akQfCE" inline="false">
+                <mutation name="mostrar"></mutation>
+                <field name="PROCNAME">mostrar</field>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="=!tY,1LPM2ejU.K2Bo-7" x="529" y="349">
+    <mutation component_type="Button" instance_name="Button2" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button2</field>
+    <statement name="DO">
+      <block type="lexical_variable_set" id="#v;LOuSAs8ZI29/_e3Nm">
+        <field name="VAR">global n</field>
+        <value name="VALUE">
+          <block type="math_add" id="AeHe2}4.u1v?`OyAb$a_">
+            <mutation items="2"></mutation>
+            <value name="NUM0">
+              <block type="lexical_variable_get" id="ckZ9@K%gkv(L3*88GZjB">
+                <field name="VAR">global n</field>
+              </block>
+            </value>
+            <value name="NUM1">
+              <block type="math_number" id="4[aCx[o=r[K3q#UMHl%e">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="#@%shQcD:?F3{:]u`M#Z">
+            <value name="IF0">
+              <block type="math_compare" id="AA7,}pMyV(U*xSw$~/5#">
+                <field name="OP">GTE</field>
+                <value name="A">
+                  <block type="lexical_variable_get" id=".4F.VBe0ApX).ZIjX=E1">
+                    <field name="VAR">global n</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="+;Wb62caG0G8bz1KX%i@">
+                    <field name="NUM">50</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="lexical_variable_set" id="6zoguHgmAsr`:kNacV~G">
+                <field name="VAR">global n</field>
+                <value name="VALUE">
+                  <block type="math_number" id="aFOOfFcmwpA%@U5CVA;z">
+                    <field name="NUM">50</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="procedures_callnoreturn" id="EAjMI!3%t2QHa|;82:F|" inline="false">
+                <mutation name="mostrar"></mutation>
+                <field name="PROCNAME">mostrar</field>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="_`X9o4kbA^.?.$_Sx89G" x="17" y="578">
+    <field name="NAME">mostrar</field>
+    <statement name="STACK">
+      <block type="controls_if" id="qDFaz|tvF*(Xo22j6+t9">
+        <mutation elseif="3"></mutation>
+        <value name="IF0">
+          <block type="text_compare" id="!pPvp(Tw+_Wg.9`P$N0-">
+            <field name="OP">EQUAL</field>
+            <value name="TEXT1">
+              <block type="component_set_get" id="0/ect$W7!GLD%gzm!Mtg">
+                <mutation component_type="Spinner" set_or_get="get" property_name="Selection" is_generic="false" instance_name="Spinner1"></mutation>
+                <field name="COMPONENT_SELECTOR">Spinner1</field>
+                <field name="PROP">Selection</field>
+              </block>
+            </value>
+            <value name="TEXT2">
+              <block type="text" id="```urSo/zk~v8Wyq6x=d">
+                <field name="TEXT">Fecha</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="I+W|j6xSvq)phC!}h.,V">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+            <field name="COMPONENT_SELECTOR">Label1</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="lists_lookup_in_pairs" id="n%d(LJg!WbuV/Q2.G@]v">
+                <value name="KEY">
+                  <block type="text" id="?7mJM`/i{k.3SI@H6R74">
+                    <field name="TEXT">Id_tipo</field>
+                  </block>
+                </value>
+                <value name="LIST">
+                  <block type="lists_select_item" id="}F|OUV6s~$:yO/*mn1D7">
+                    <value name="LIST">
+                      <block type="lexical_variable_get" id="t$:`@j^8^axRsI^Cik{v">
+                        <field name="VAR">global lista</field>
+                      </block>
+                    </value>
+                    <value name="NUM">
+                      <block type="lexical_variable_get" id="S[bfqyxs8~8v%@HBnwp0">
+                        <field name="VAR">global n</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="NOTFOUND">
+                  <block type="text" id="Mz[lgaKKV){AW|83g2Sw">
+                    <field name="TEXT">not found</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id=".?]b{;pU;`=wS{msT#Kc">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                <field name="COMPONENT_SELECTOR">Label2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="lists_lookup_in_pairs" id="L/^_a]m?3i5+EfC7-T,y">
+                    <value name="KEY">
+                      <block type="text" id="TFx2=$y;E;832%ExKL65">
+                        <field name="TEXT">Carnet</field>
+                      </block>
+                    </value>
+                    <value name="LIST">
+                      <block type="lists_select_item" id=")hX4}~)tNq(v9r-C;j8q">
+                        <value name="LIST">
+                          <block type="lexical_variable_get" id="hLJMBi2/}?9aB7C=eu5Q">
+                            <field name="VAR">global lista</field>
+                          </block>
+                        </value>
+                        <value name="NUM">
+                          <block type="lexical_variable_get" id="N8)t@+U*|?L)wOwec7%O">
+                            <field name="VAR">global n</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="NOTFOUND">
+                      <block type="text" id="Dj1(I}Q}}r6Zwn,Ygpv}">
+                        <field name="TEXT">not found</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="S3/K@L|G7_4@j|%6b[tf">
+                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label3"></mutation>
+                    <field name="COMPONENT_SELECTOR">Label3</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="lists_lookup_in_pairs" id="s7FgRYQ(Zq7C$(])ey7R">
+                        <value name="KEY">
+                          <block type="text" id="G=K+K)|/};{[9QWT#bIO">
+                            <field name="TEXT">Valor_medicion</field>
+                          </block>
+                        </value>
+                        <value name="LIST">
+                          <block type="lists_select_item" id="_Rm`0}KUiFM7wxo#fSkm">
+                            <value name="LIST">
+                              <block type="lexical_variable_get" id="nqfmi;+3CUgI$/aWK#9(">
+                                <field name="VAR">global lista</field>
+                              </block>
+                            </value>
+                            <value name="NUM">
+                              <block type="lexical_variable_get" id="ULto?c66u3DirA)jrbI_">
+                                <field name="VAR">global n</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="NOTFOUND">
+                          <block type="text" id="E9t,B!v)bn~jKP~YTqW5">
+                            <field name="TEXT">not found</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="k-%Xq]0OPX8OVyUg~HFY">
+                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label4"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label4</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="lists_lookup_in_pairs" id="f(zVY47_WdwU|9x|`[0h">
+                            <value name="KEY">
+                              <block type="text" id="S^n`i2/,yP);*a(5Q5Y3">
+                                <field name="TEXT">Fecha</field>
+                              </block>
+                            </value>
+                            <value name="LIST">
+                              <block type="lists_select_item" id="kwq.f*R?F^f*X$[sWJWD">
+                                <value name="LIST">
+                                  <block type="lexical_variable_get" id="+R`SJkNKPMlD==]_(I*g">
+                                    <field name="VAR">global lista</field>
+                                  </block>
+                                </value>
+                                <value name="NUM">
+                                  <block type="lexical_variable_get" id="FC^+UYJKFcy$oX;IiRkz">
+                                    <field name="VAR">global n</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="NOTFOUND">
+                              <block type="text" id="O{/+,CpSK%fQVLfRFWf^">
+                                <field name="TEXT">not found</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="+|Nco#vLbp?m7{!u{/I5">
+                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label5"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label5</field>
+                            <field name="PROP">Text</field>
+                            <value name="VALUE">
+                              <block type="lists_lookup_in_pairs" id="_`5]Y!Gy[Xk#;h?:AGhS">
+                                <value name="KEY">
+                                  <block type="text" id="#gNQGWe@R}AQ#I9h`]n)">
+                                    <field name="TEXT">Hora</field>
+                                  </block>
+                                </value>
+                                <value name="LIST">
+                                  <block type="lists_select_item" id="O`Z47wUw0-UAV6`wTl7u">
+                                    <value name="LIST">
+                                      <block type="lexical_variable_get" id="GT.Gn]$_G)w%R(+GZdDN">
+                                        <field name="VAR">global lista</field>
+                                      </block>
+                                    </value>
+                                    <value name="NUM">
+                                      <block type="lexical_variable_get" id="DuFM~C6!0#HI]r:h[Kjy">
+                                        <field name="VAR">global n</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="NOTFOUND">
+                                  <block type="text" id="Lje7{n-^.pM|0(Au{!yN">
+                                    <field name="TEXT">not found</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="]j4WEAx%;HYBAIP^HD%j">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label6"></mutation>
+                                <field name="COMPONENT_SELECTOR">Label6</field>
+                                <field name="PROP">Text</field>
+                                <value name="VALUE">
+                                  <block type="lists_lookup_in_pairs" id="f]0Ro75C_pc}y0T,1AQA">
+                                    <value name="KEY">
+                                      <block type="text" id="!(NY8_wuDE~y_QR,#R#3">
+                                        <field name="TEXT">Latitud</field>
+                                      </block>
+                                    </value>
+                                    <value name="LIST">
+                                      <block type="lists_select_item" id="t`)7FFA|jaA7!]HrY7*F">
+                                        <value name="LIST">
+                                          <block type="lexical_variable_get" id="+`_24,_SeDr/_CpVRI|F">
+                                            <field name="VAR">global lista</field>
+                                          </block>
+                                        </value>
+                                        <value name="NUM">
+                                          <block type="lexical_variable_get" id="D|3{yvfyoRn4SOtu`E#_">
+                                            <field name="VAR">global n</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="NOTFOUND">
+                                      <block type="text" id="X2h!ZjpjPNB8wB@xOcEs">
+                                        <field name="TEXT">not found</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="component_set_get" id="x,w+Qt:=ZrO`_-E,JIlc">
+                                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label7"></mutation>
+                                    <field name="COMPONENT_SELECTOR">Label7</field>
+                                    <field name="PROP">Text</field>
+                                    <value name="VALUE">
+                                      <block type="lists_lookup_in_pairs" id="~p6$e0(.K7]tZaGWJWQB">
+                                        <value name="KEY">
+                                          <block type="text" id="BMW(`dylK77J99j8GS[{">
+                                            <field name="TEXT">Longitud</field>
+                                          </block>
+                                        </value>
+                                        <value name="LIST">
+                                          <block type="lists_select_item" id="cdCcc3L]-]0-78KOyx:j">
+                                            <value name="LIST">
+                                              <block type="lexical_variable_get" id="5w7Wb?CO2up|Ta14R7oL">
+                                                <field name="VAR">global lista</field>
+                                              </block>
+                                            </value>
+                                            <value name="NUM">
+                                              <block type="lexical_variable_get" id="0PPDq]^`bNFg4EHdnl*N">
+                                                <field name="VAR">global n</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="NOTFOUND">
+                                          <block type="text" id="*1{/T0~^{3a)S=-ceVFH">
+                                            <field name="TEXT">not found</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="component_set_get" id="9[9lWtAFlUadS}([M~~e">
+                                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label8"></mutation>
+                                        <field name="COMPONENT_SELECTOR">Label8</field>
+                                        <field name="PROP">Text</field>
+                                        <value name="VALUE">
+                                          <block type="lists_lookup_in_pairs" id="Jh7G2yXDM_ilInp^.qjc">
+                                            <value name="KEY">
+                                              <block type="text" id="qhqpFJ^7Lop(dSccDMX.">
+                                                <field name="TEXT">Unidad</field>
+                                              </block>
+                                            </value>
+                                            <value name="LIST">
+                                              <block type="lists_select_item" id="M8{8X-1k#FFa6#J$9J#f">
+                                                <value name="LIST">
+                                                  <block type="lexical_variable_get" id="L(jJr-|lc$`.#V{1!OLN">
+                                                    <field name="VAR">global lista</field>
+                                                  </block>
+                                                </value>
+                                                <value name="NUM">
+                                                  <block type="lexical_variable_get" id="_]*Cl8ua)iy;AU#n|w-[">
+                                                    <field name="VAR">global n</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="NOTFOUND">
+                                              <block type="text" id="CiWItx:hUP`GYf3XIo(Y">
+                                                <field name="TEXT">not found</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="component_set_get" id=",iP7Km]vhGPw26D..LJl">
+                                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label9"></mutation>
+                                            <field name="COMPONENT_SELECTOR">Label9</field>
+                                            <field name="PROP">Text</field>
+                                            <value name="VALUE">
+                                              <block type="lists_lookup_in_pairs" id="%^NwLiXm#,ZTwD,_z2dL">
+                                                <value name="KEY">
+                                                  <block type="text" id=":{aYmK-RT~+s:|B#8^u_">
+                                                    <field name="TEXT">Id_medicion</field>
+                                                  </block>
+                                                </value>
+                                                <value name="LIST">
+                                                  <block type="lists_select_item" id="^]Wu5T,VYM84ryv}#P#q">
+                                                    <value name="LIST">
+                                                      <block type="lexical_variable_get" id="u@]u(Ih)r!iq|0s{50o^">
+                                                        <field name="VAR">global lista</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="NUM">
+                                                      <block type="lexical_variable_get" id="K;%D^?4,n^C.VgkXPV7]">
+                                                        <field name="VAR">global n</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="NOTFOUND">
+                                                  <block type="text" id="FFHmz#GT{7*V;J@-/}XA">
+                                                    <field name="TEXT">not found</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="component_set_get" id="c/?x3BX$4::^zM@9=?-.">
+                                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label19"></mutation>
+                                                <field name="COMPONENT_SELECTOR">Label19</field>
+                                                <field name="PROP">Text</field>
+                                                <value name="VALUE">
+                                                  <block type="text" id="GVRc2Hax7y?tNy^%O.}N">
+                                                    <field name="TEXT">por Fecha</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="text_compare" id="wT6)dDVF}h*zpn*263}n">
+            <field name="OP">EQUAL</field>
+            <value name="TEXT1">
+              <block type="component_set_get" id="[yYa:hrvyS=!+T[.?fNy">
+                <mutation component_type="Spinner" set_or_get="get" property_name="Selection" is_generic="false" instance_name="Spinner1"></mutation>
+                <field name="COMPONENT_SELECTOR">Spinner1</field>
+                <field name="PROP">Selection</field>
+              </block>
+            </value>
+            <value name="TEXT2">
+              <block type="text" id="gbXw,N0V}W;Q6/$7OADJ">
+                <field name="TEXT">Hora</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="component_set_get" id="#o9qz5O/Sg|jLZGE+H{.">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+            <field name="COMPONENT_SELECTOR">Label1</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="lists_lookup_in_pairs" id="8@/Njkeat[FW-j#:X6hR">
+                <value name="KEY">
+                  <block type="text" id="2a(p]}jz3KJX)p4t0h*u">
+                    <field name="TEXT">Id_tipo</field>
+                  </block>
+                </value>
+                <value name="LIST">
+                  <block type="lists_select_item" id="H))q(Lt^]m)N4q$k7|ty">
+                    <value name="LIST">
+                      <block type="lexical_variable_get" id=".YcH#X@XJp]h5]/7e_oy">
+                        <field name="VAR">global lista</field>
+                      </block>
+                    </value>
+                    <value name="NUM">
+                      <block type="lexical_variable_get" id=")ydcBO+v_qBBgry[QW,z">
+                        <field name="VAR">global n</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="NOTFOUND">
+                  <block type="text" id="Sud!S1JH=Vzpr1O`?q=~">
+                    <field name="TEXT">not found</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id=")SzE#U8Nb[(2$M:GJeyh">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                <field name="COMPONENT_SELECTOR">Label2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="lists_lookup_in_pairs" id=":YKkkZ{S(52xn:r}Tfzs">
+                    <value name="KEY">
+                      <block type="text" id="gD*v=c^L?B*~m2xPu2,-">
+                        <field name="TEXT">Carnet</field>
+                      </block>
+                    </value>
+                    <value name="LIST">
+                      <block type="lists_select_item" id="o`WYh/2r0^HlaUw~yzJZ">
+                        <value name="LIST">
+                          <block type="lexical_variable_get" id="zs%2e2#IU(J`:QcTX`N1">
+                            <field name="VAR">global lista</field>
+                          </block>
+                        </value>
+                        <value name="NUM">
+                          <block type="lexical_variable_get" id="F!OusDcFYIxam*o_Wb~F">
+                            <field name="VAR">global n</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="NOTFOUND">
+                      <block type="text" id="$)Y|#hmkdB.;jT{=vX~!">
+                        <field name="TEXT">not found</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="tx|ZiJwRy58Pq5YR@`W)">
+                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label3"></mutation>
+                    <field name="COMPONENT_SELECTOR">Label3</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="lists_lookup_in_pairs" id="clDd{|ac-9T5cSBM5*,m">
+                        <value name="KEY">
+                          <block type="text" id="T,Wc85],f@(}3pNiTKfT">
+                            <field name="TEXT">Valor_medicion</field>
+                          </block>
+                        </value>
+                        <value name="LIST">
+                          <block type="lists_select_item" id="9LAyPLP}25?l,aK?[=dV">
+                            <value name="LIST">
+                              <block type="lexical_variable_get" id="p2gOy^dm)wrjm?:8aLry">
+                                <field name="VAR">global lista</field>
+                              </block>
+                            </value>
+                            <value name="NUM">
+                              <block type="lexical_variable_get" id="q{K-k`%Yfndy@k9]48FD">
+                                <field name="VAR">global n</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="NOTFOUND">
+                          <block type="text" id="Ee!U|M$fCDo+B?BN9IQg">
+                            <field name="TEXT">not found</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="(C96ryM%LvXE_UfLDfNW">
+                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label4"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label4</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="lists_lookup_in_pairs" id="TE8%!|hyKEctN$x2,Lp^">
+                            <value name="KEY">
+                              <block type="text" id="yk/~Q.7lR|GmBJ8w]2k=">
+                                <field name="TEXT">Fecha</field>
+                              </block>
+                            </value>
+                            <value name="LIST">
+                              <block type="lists_select_item" id="lfyoB^Mvx1lXIxZ^}eYG">
+                                <value name="LIST">
+                                  <block type="lexical_variable_get" id=")VVVOe@_[NfNBL-ntG%o">
+                                    <field name="VAR">global lista</field>
+                                  </block>
+                                </value>
+                                <value name="NUM">
+                                  <block type="lexical_variable_get" id="kg|R^aE=J!Bw0Z#FPX[|">
+                                    <field name="VAR">global n</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="NOTFOUND">
+                              <block type="text" id="F)o9YhiwO{Y5H75(;^}2">
+                                <field name="TEXT">not found</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="9uQ2xO[Y^XA4;x$H*n1f">
+                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label5"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label5</field>
+                            <field name="PROP">Text</field>
+                            <value name="VALUE">
+                              <block type="lists_lookup_in_pairs" id="HjL8SKH,8X#+@9:x~]gh">
+                                <value name="KEY">
+                                  <block type="text" id="1LDV?yI3H9I=v7t3a-7F">
+                                    <field name="TEXT">Hora</field>
+                                  </block>
+                                </value>
+                                <value name="LIST">
+                                  <block type="lists_select_item" id="r*{t/E~vC@={TUeY*[8:">
+                                    <value name="LIST">
+                                      <block type="lexical_variable_get" id="0uv3fK-;^:DDBX}cLfcq">
+                                        <field name="VAR">global lista</field>
+                                      </block>
+                                    </value>
+                                    <value name="NUM">
+                                      <block type="lexical_variable_get" id="Q_:el}}!0[hf?-z`TGJZ">
+                                        <field name="VAR">global n</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="NOTFOUND">
+                                  <block type="text" id="uh#pw{iiVQz.Bui6?eDI">
+                                    <field name="TEXT">not found</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="(/k2@5`!Xj@NK}}TkVi3">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label6"></mutation>
+                                <field name="COMPONENT_SELECTOR">Label6</field>
+                                <field name="PROP">Text</field>
+                                <value name="VALUE">
+                                  <block type="lists_lookup_in_pairs" id="Yr_jaF8*@Iurxl]Lqkg2">
+                                    <value name="KEY">
+                                      <block type="text" id="F?]I=kv]4w3BIP*!;/uS">
+                                        <field name="TEXT">Latitud</field>
+                                      </block>
+                                    </value>
+                                    <value name="LIST">
+                                      <block type="lists_select_item" id="m$Wwx-TO:zzGw4.H/B_}">
+                                        <value name="LIST">
+                                          <block type="lexical_variable_get" id=";52~m~l;uA^,nd0u|o6a">
+                                            <field name="VAR">global lista</field>
+                                          </block>
+                                        </value>
+                                        <value name="NUM">
+                                          <block type="lexical_variable_get" id="$rT5[08wsM:2noOv@6fx">
+                                            <field name="VAR">global n</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="NOTFOUND">
+                                      <block type="text" id="5S=b@tzImk]cHD-FJsXb">
+                                        <field name="TEXT">not found</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="component_set_get" id="0*+%@(w_trkOIvbb096i">
+                                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label7"></mutation>
+                                    <field name="COMPONENT_SELECTOR">Label7</field>
+                                    <field name="PROP">Text</field>
+                                    <value name="VALUE">
+                                      <block type="lists_lookup_in_pairs" id="s[+JK]PsDoT,,s*OY!z3">
+                                        <value name="KEY">
+                                          <block type="text" id="@USYcFbt+A=l#[*CWJLs">
+                                            <field name="TEXT">Longitud</field>
+                                          </block>
+                                        </value>
+                                        <value name="LIST">
+                                          <block type="lists_select_item" id="v.86cv3N3*7hXi:?{ICq">
+                                            <value name="LIST">
+                                              <block type="lexical_variable_get" id="E^:6Y+?QLw980l+4sz!D">
+                                                <field name="VAR">global lista</field>
+                                              </block>
+                                            </value>
+                                            <value name="NUM">
+                                              <block type="lexical_variable_get" id="_n!Z:kzV(`Of_@)~TB;s">
+                                                <field name="VAR">global n</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="NOTFOUND">
+                                          <block type="text" id="9z|`f*(e;7Y_m4dC+6yw">
+                                            <field name="TEXT">not found</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="component_set_get" id="L](|s0rSIaE?*=0yk2nM">
+                                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label8"></mutation>
+                                        <field name="COMPONENT_SELECTOR">Label8</field>
+                                        <field name="PROP">Text</field>
+                                        <value name="VALUE">
+                                          <block type="lists_lookup_in_pairs" id="l:IG7e(*qeUhcOfNWKG[">
+                                            <value name="KEY">
+                                              <block type="text" id="{9Mwwq*(i_zhxzp4L{oT">
+                                                <field name="TEXT">Unidad</field>
+                                              </block>
+                                            </value>
+                                            <value name="LIST">
+                                              <block type="lists_select_item" id="2}P:b[BJ0`dy;~azHQ$v">
+                                                <value name="LIST">
+                                                  <block type="lexical_variable_get" id="m`Kux8#4a2hm,D?H/h`g">
+                                                    <field name="VAR">global lista</field>
+                                                  </block>
+                                                </value>
+                                                <value name="NUM">
+                                                  <block type="lexical_variable_get" id="_D/p_!3IX_Mk$rEr5S|R">
+                                                    <field name="VAR">global n</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="NOTFOUND">
+                                              <block type="text" id="ts(%6%j-5nFTIY^3Lqd=">
+                                                <field name="TEXT">not found</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="component_set_get" id="#Je,1-`k]hTNS)+CPV*t">
+                                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label9"></mutation>
+                                            <field name="COMPONENT_SELECTOR">Label9</field>
+                                            <field name="PROP">Text</field>
+                                            <value name="VALUE">
+                                              <block type="lists_lookup_in_pairs" id="W5?O]13ewv|LbdE2_iU)">
+                                                <value name="KEY">
+                                                  <block type="text" id="7yL/z7f{`$LuXxvV#v~X">
+                                                    <field name="TEXT">Id_medicion</field>
+                                                  </block>
+                                                </value>
+                                                <value name="LIST">
+                                                  <block type="lists_select_item" id="Q6Kx8Z9|wzO#Q2iSXnGu">
+                                                    <value name="LIST">
+                                                      <block type="lexical_variable_get" id="Z`S544CA2ZX2h*{q?:-G">
+                                                        <field name="VAR">global lista</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="NUM">
+                                                      <block type="lexical_variable_get" id="$=|By6Mbh,PW!$*4?l*~">
+                                                        <field name="VAR">global n</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="NOTFOUND">
+                                                  <block type="text" id="8q[N@9G,+Xg*Nn6lj9O?">
+                                                    <field name="TEXT">not found</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="component_set_get" id="Z^qD),2Sy4;QQS$=;6+l">
+                                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label19"></mutation>
+                                                <field name="COMPONENT_SELECTOR">Label19</field>
+                                                <field name="PROP">Text</field>
+                                                <value name="VALUE">
+                                                  <block type="text" id="0rR1hun4-CoiEQZn|Hn*">
+                                                    <field name="TEXT">Por Hora</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF2">
+          <block type="text_compare" id="B_]Q.|Y]`g(sK4I%kBO*">
+            <field name="OP">EQUAL</field>
+            <value name="TEXT1">
+              <block type="component_set_get" id="SJ5nrH-w)$bt)ngs!2.A">
+                <mutation component_type="Spinner" set_or_get="get" property_name="Selection" is_generic="false" instance_name="Spinner1"></mutation>
+                <field name="COMPONENT_SELECTOR">Spinner1</field>
+                <field name="PROP">Selection</field>
+              </block>
+            </value>
+            <value name="TEXT2">
+              <block type="text" id="Xv?,2e5vf-$*=:LrC~{~">
+                <field name="TEXT">tipo</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block type="component_set_get" id="au},-%,4_B(R1aD_1HiN">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+            <field name="COMPONENT_SELECTOR">Label1</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="lists_lookup_in_pairs" id="dw$=d8dCVi{(o#xu+,(1">
+                <value name="KEY">
+                  <block type="text" id="uaC=kMa}PY6(x%/lNnX^">
+                    <field name="TEXT">Id_tipo</field>
+                  </block>
+                </value>
+                <value name="LIST">
+                  <block type="lists_select_item" id="zn8DcJHfHRy6Xo=K0PKa">
+                    <value name="LIST">
+                      <block type="lexical_variable_get" id="!H5,!k5l+}hygwSYZrPD">
+                        <field name="VAR">global lista</field>
+                      </block>
+                    </value>
+                    <value name="NUM">
+                      <block type="lexical_variable_get" id="M0pl!d(E$4(FgFZ3.z8!">
+                        <field name="VAR">global n</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="NOTFOUND">
+                  <block type="text" id="M6}nD{8;OV^9~Zhl4l@|">
+                    <field name="TEXT">not found</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="a=`{7Z*lncX]BM?!=7EI">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                <field name="COMPONENT_SELECTOR">Label2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="lists_lookup_in_pairs" id="-tkbn)8i.oHtH+h#@EL}">
+                    <value name="KEY">
+                      <block type="text" id="Q(+bc]!#Mf0~kaht[AVT">
+                        <field name="TEXT">Carnet</field>
+                      </block>
+                    </value>
+                    <value name="LIST">
+                      <block type="lists_select_item" id="}1NqxKPpz]=hlEigl1[d">
+                        <value name="LIST">
+                          <block type="lexical_variable_get" id="lLFD%,SG)Eq*]kk}Qe|F">
+                            <field name="VAR">global lista</field>
+                          </block>
+                        </value>
+                        <value name="NUM">
+                          <block type="lexical_variable_get" id=")UL0lh-FgX3K/zj$4i,o">
+                            <field name="VAR">global n</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="NOTFOUND">
+                      <block type="text" id="}lT4}$~k0r`sRb};=.6K">
+                        <field name="TEXT">not found</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="7oN(]o*m/F16X+%VEfne">
+                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label3"></mutation>
+                    <field name="COMPONENT_SELECTOR">Label3</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="lists_lookup_in_pairs" id="SH(TY(ciM..%8HNCWxl`">
+                        <value name="KEY">
+                          <block type="text" id=":)=W,#7=u]!_{q-Lhc!q">
+                            <field name="TEXT">Valor_medicion</field>
+                          </block>
+                        </value>
+                        <value name="LIST">
+                          <block type="lists_select_item" id="l_Ula$Y1CoL2BSIrS#mO">
+                            <value name="LIST">
+                              <block type="lexical_variable_get" id="CN1{:[g|IiZ,xiE^xw=`">
+                                <field name="VAR">global lista</field>
+                              </block>
+                            </value>
+                            <value name="NUM">
+                              <block type="lexical_variable_get" id="MR!^a/i(v%gyP%H!Ic0g">
+                                <field name="VAR">global n</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="NOTFOUND">
+                          <block type="text" id="94Kt-Sx?iy3*q6VQIlhH">
+                            <field name="TEXT">not found</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="]h`JU`t#FnsIk~R{{c$f">
+                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label4"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label4</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="lists_lookup_in_pairs" id="f3i!KK0nF(gzr$J_6wr@">
+                            <value name="KEY">
+                              <block type="text" id="#l/Ix]==)4c;}D[6u0$p">
+                                <field name="TEXT">Fecha</field>
+                              </block>
+                            </value>
+                            <value name="LIST">
+                              <block type="lists_select_item" id="ra5o.HUi;QG=7l_{/lF2">
+                                <value name="LIST">
+                                  <block type="lexical_variable_get" id="h_N.u[p^I*`.04mQ]!8Z">
+                                    <field name="VAR">global lista</field>
+                                  </block>
+                                </value>
+                                <value name="NUM">
+                                  <block type="lexical_variable_get" id="xU7BOPg]|tT4HNNdCMaT">
+                                    <field name="VAR">global n</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="NOTFOUND">
+                              <block type="text" id="@he^)k+bu}~9Kw6UquUp">
+                                <field name="TEXT">not found</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="kI1^HBaU$lKxrGdgb,`/">
+                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label5"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label5</field>
+                            <field name="PROP">Text</field>
+                            <value name="VALUE">
+                              <block type="lists_lookup_in_pairs" id="eU]/ZDJ1;u%1j1_K,9I/">
+                                <value name="KEY">
+                                  <block type="text" id="~(*p31pVCFc2|AZ:eO5X">
+                                    <field name="TEXT">Hora</field>
+                                  </block>
+                                </value>
+                                <value name="LIST">
+                                  <block type="lists_select_item" id=".V/5wv-8J4Y[oQMRdX+A">
+                                    <value name="LIST">
+                                      <block type="lexical_variable_get" id="5.*r$T6JO)[[aFF}ZO`0">
+                                        <field name="VAR">global lista</field>
+                                      </block>
+                                    </value>
+                                    <value name="NUM">
+                                      <block type="lexical_variable_get" id="O3ReGPsZbb{kc:RZ3.R=">
+                                        <field name="VAR">global n</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="NOTFOUND">
+                                  <block type="text" id=":HCdH3Y5b:ghy8MWA,+J">
+                                    <field name="TEXT">not found</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="XsY[cCfH|eb@bFgZ^)61">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label6"></mutation>
+                                <field name="COMPONENT_SELECTOR">Label6</field>
+                                <field name="PROP">Text</field>
+                                <value name="VALUE">
+                                  <block type="lists_lookup_in_pairs" id="L}Ct6GJc#,ALWQF#w#$|">
+                                    <value name="KEY">
+                                      <block type="text" id="T*Iw|18jTKOt}2p5/EWq">
+                                        <field name="TEXT">Latitud</field>
+                                      </block>
+                                    </value>
+                                    <value name="LIST">
+                                      <block type="lists_select_item" id="#oDkEA6_ch1Ac}(0l!n0">
+                                        <value name="LIST">
+                                          <block type="lexical_variable_get" id="zF:)_tG#h{vVR]Mki]2w">
+                                            <field name="VAR">global lista</field>
+                                          </block>
+                                        </value>
+                                        <value name="NUM">
+                                          <block type="lexical_variable_get" id="P3!(ADbiiOMb.3VzE,lJ">
+                                            <field name="VAR">global n</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="NOTFOUND">
+                                      <block type="text" id="W8F;0*a/ZQ-;#:Zg8hl1">
+                                        <field name="TEXT">not found</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="component_set_get" id=":u!`A{-qk|yUX5~(SgtP">
+                                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label7"></mutation>
+                                    <field name="COMPONENT_SELECTOR">Label7</field>
+                                    <field name="PROP">Text</field>
+                                    <value name="VALUE">
+                                      <block type="lists_lookup_in_pairs" id="Ib5Y+[GBeJA]Rqr}DmX~">
+                                        <value name="KEY">
+                                          <block type="text" id="n0#$TBGKMt3A2Q]mAQ.o">
+                                            <field name="TEXT">Longitud</field>
+                                          </block>
+                                        </value>
+                                        <value name="LIST">
+                                          <block type="lists_select_item" id="IF8HmfN4+2%K3{}91Sp,">
+                                            <value name="LIST">
+                                              <block type="lexical_variable_get" id="WWyI=|Zusr}Ub3b}G,Ye">
+                                                <field name="VAR">global lista</field>
+                                              </block>
+                                            </value>
+                                            <value name="NUM">
+                                              <block type="lexical_variable_get" id="lSAB5;R_=bTwC(t3|D1V">
+                                                <field name="VAR">global n</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="NOTFOUND">
+                                          <block type="text" id="_);KqE8x[wGe!RQUke[d">
+                                            <field name="TEXT">not found</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="component_set_get" id="t++F1wqxX$xoHo/E034z">
+                                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label8"></mutation>
+                                        <field name="COMPONENT_SELECTOR">Label8</field>
+                                        <field name="PROP">Text</field>
+                                        <value name="VALUE">
+                                          <block type="lists_lookup_in_pairs" id="(4K,2*6w_H^4xpWQwMc6">
+                                            <value name="KEY">
+                                              <block type="text" id="mtO5*V.a]viw]CGy-(Lz">
+                                                <field name="TEXT">Unidad</field>
+                                              </block>
+                                            </value>
+                                            <value name="LIST">
+                                              <block type="lists_select_item" id="[XQBr?n:s.AwlExp|!9T">
+                                                <value name="LIST">
+                                                  <block type="lexical_variable_get" id="gjpu*c8/*UT}Rqocl0bV">
+                                                    <field name="VAR">global lista</field>
+                                                  </block>
+                                                </value>
+                                                <value name="NUM">
+                                                  <block type="lexical_variable_get" id="0AvtlE=rv0C!h}$D+{*|">
+                                                    <field name="VAR">global n</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="NOTFOUND">
+                                              <block type="text" id="a{Rhz8FBV/ZZPSb-zu0)">
+                                                <field name="TEXT">not found</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="component_set_get" id="D:D,m.q.^LI*/l#z=I~%">
+                                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label9"></mutation>
+                                            <field name="COMPONENT_SELECTOR">Label9</field>
+                                            <field name="PROP">Text</field>
+                                            <value name="VALUE">
+                                              <block type="lists_lookup_in_pairs" id="]d;t=(iXt8*#:6}lxvK:">
+                                                <value name="KEY">
+                                                  <block type="text" id="Kl,~IALcC-Vi_@F8pz)s">
+                                                    <field name="TEXT">Id_medicion</field>
+                                                  </block>
+                                                </value>
+                                                <value name="LIST">
+                                                  <block type="lists_select_item" id="En;9W$G/n`u.`n.`ZYXL">
+                                                    <value name="LIST">
+                                                      <block type="lexical_variable_get" id="uWq07`SD3t5WS}LNPHyU">
+                                                        <field name="VAR">global lista</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="NUM">
+                                                      <block type="lexical_variable_get" id=",l#(6~2!VXx6PoMVtvhT">
+                                                        <field name="VAR">global n</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="NOTFOUND">
+                                                  <block type="text" id="4X3xPRVZ9dcw5o[6]]T.">
+                                                    <field name="TEXT">not found</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="component_set_get" id="etdt__g(mo}_=cg/?_RO">
+                                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label19"></mutation>
+                                                <field name="COMPONENT_SELECTOR">Label19</field>
+                                                <field name="PROP">Text</field>
+                                                <value name="VALUE">
+                                                  <block type="text" id="$emDFy`06=;F,;J!/rS)">
+                                                    <field name="TEXT">Por Tipo</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF3">
+          <block type="text_compare" id="xDLfMWf=NZ0DC#lYbkNU">
+            <field name="OP">EQUAL</field>
+            <value name="TEXT1">
+              <block type="component_set_get" id="vVo2G~:0}MSpz2G2;+`E">
+                <mutation component_type="Spinner" set_or_get="get" property_name="Selection" is_generic="false" instance_name="Spinner1"></mutation>
+                <field name="COMPONENT_SELECTOR">Spinner1</field>
+                <field name="PROP">Selection</field>
+              </block>
+            </value>
+            <value name="TEXT2">
+              <block type="text" id="rqd$UQ4bhug21G#tWGg{">
+                <field name="TEXT">ubicacion</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO3">
+          <block type="component_set_get" id="*HPb4ScaS_H-eX0{yo/S">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label1"></mutation>
+            <field name="COMPONENT_SELECTOR">Label1</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="lists_lookup_in_pairs" id=",3F[5zRmkmqWB/rmot(|">
+                <value name="KEY">
+                  <block type="text" id="atKG$yt~sj:P#JY$iW$E">
+                    <field name="TEXT">Id_tipo</field>
+                  </block>
+                </value>
+                <value name="LIST">
+                  <block type="lists_select_item" id="fOUe5_oa9Ixe.y[/NGDu">
+                    <value name="LIST">
+                      <block type="lexical_variable_get" id="ZQ)Kcl(*[T{#zuT#|m)9">
+                        <field name="VAR">global lista</field>
+                      </block>
+                    </value>
+                    <value name="NUM">
+                      <block type="lexical_variable_get" id="nzO~D+pma.n_X:mi.Son">
+                        <field name="VAR">global n</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="NOTFOUND">
+                  <block type="text" id="%L`@1oydS,D,=jH3i*hH">
+                    <field name="TEXT">not found</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="%D_yNRVePFQRrf0[IFQR">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+                <field name="COMPONENT_SELECTOR">Label2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="lists_lookup_in_pairs" id="wpxMZt,1hG#asBVA6+#R">
+                    <value name="KEY">
+                      <block type="text" id="rM?U0gc60g=i7=IIRw89">
+                        <field name="TEXT">Carnet</field>
+                      </block>
+                    </value>
+                    <value name="LIST">
+                      <block type="lists_select_item" id="1OQkfUk2l9:CB5M55a[+">
+                        <value name="LIST">
+                          <block type="lexical_variable_get" id="rHwM|N.^fuQ1P,h*A)Yj">
+                            <field name="VAR">global lista</field>
+                          </block>
+                        </value>
+                        <value name="NUM">
+                          <block type="lexical_variable_get" id="^!K50^I7IYiCM.:`pwUC">
+                            <field name="VAR">global n</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="NOTFOUND">
+                      <block type="text" id="9nY~m{+h]`t@a@GD(]|c">
+                        <field name="TEXT">not found</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="[}SK%yW)2Lv.T;wi6T]=">
+                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label3"></mutation>
+                    <field name="COMPONENT_SELECTOR">Label3</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="lists_lookup_in_pairs" id="=BRL~{5MW-taKE-*7zJ2">
+                        <value name="KEY">
+                          <block type="text" id="fMe:f*TFxbvn|{Qyi;;O">
+                            <field name="TEXT">Valor_medicion</field>
+                          </block>
+                        </value>
+                        <value name="LIST">
+                          <block type="lists_select_item" id="jq7HJY86NsX!cgn:h058">
+                            <value name="LIST">
+                              <block type="lexical_variable_get" id="eow#/OW){5tJJtap#*_@">
+                                <field name="VAR">global lista</field>
+                              </block>
+                            </value>
+                            <value name="NUM">
+                              <block type="lexical_variable_get" id="({:J:D*PC:lybdyl_@21">
+                                <field name="VAR">global n</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="NOTFOUND">
+                          <block type="text" id="|lYZHqr[!qVz~+qC/aHV">
+                            <field name="TEXT">not found</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="w|5*Q[zevQc%#gW(~d?D">
+                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label4"></mutation>
+                        <field name="COMPONENT_SELECTOR">Label4</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="lists_lookup_in_pairs" id="nZg%J8Jww*@:0xe4k+yV">
+                            <value name="KEY">
+                              <block type="text" id=")3hfnpSu(xPBaC[P8av.">
+                                <field name="TEXT">Fecha</field>
+                              </block>
+                            </value>
+                            <value name="LIST">
+                              <block type="lists_select_item" id="$5Qf:R*^w2]wNa8#{=)G">
+                                <value name="LIST">
+                                  <block type="lexical_variable_get" id="/.%coso_J[Kmm0P:!P8@">
+                                    <field name="VAR">global lista</field>
+                                  </block>
+                                </value>
+                                <value name="NUM">
+                                  <block type="lexical_variable_get" id="}U3bui~CSK5*wcAZay$x">
+                                    <field name="VAR">global n</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="NOTFOUND">
+                              <block type="text" id="e=M|PHS!=IwY?RTompZi">
+                                <field name="TEXT">not found</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="C^uKuqb2GrTDsm]rjpGi">
+                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label5"></mutation>
+                            <field name="COMPONENT_SELECTOR">Label5</field>
+                            <field name="PROP">Text</field>
+                            <value name="VALUE">
+                              <block type="lists_lookup_in_pairs" id="3nO/IiVnNU9c+R*oy{wm">
+                                <value name="KEY">
+                                  <block type="text" id=")q`V`_@Cn$M/W{5bY^P@">
+                                    <field name="TEXT">Hora</field>
+                                  </block>
+                                </value>
+                                <value name="LIST">
+                                  <block type="lists_select_item" id="U-Z-i_[@M/BnB8d_j+^8">
+                                    <value name="LIST">
+                                      <block type="lexical_variable_get" id="cJTo{ke5cJ,5JJm}a+zP">
+                                        <field name="VAR">global lista</field>
+                                      </block>
+                                    </value>
+                                    <value name="NUM">
+                                      <block type="lexical_variable_get" id="s~.D5kfggLWPymnZz=#q">
+                                        <field name="VAR">global n</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="NOTFOUND">
+                                  <block type="text" id="nS8)=FNpUHwwZ7{HPZA3">
+                                    <field name="TEXT">not found</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="6{gzHNWYfJu23m]/Et(7">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label6"></mutation>
+                                <field name="COMPONENT_SELECTOR">Label6</field>
+                                <field name="PROP">Text</field>
+                                <value name="VALUE">
+                                  <block type="lists_lookup_in_pairs" id="||03ldA!(m4C+rpXn^~;">
+                                    <value name="KEY">
+                                      <block type="text" id="a:VIa3!E3H_b9P.?;Q!3">
+                                        <field name="TEXT">Latitud</field>
+                                      </block>
+                                    </value>
+                                    <value name="LIST">
+                                      <block type="lists_select_item" id="_;QftNDc_G#i,F88LB#{">
+                                        <value name="LIST">
+                                          <block type="lexical_variable_get" id="|]DI3?E;/|_+/W72|5]Y">
+                                            <field name="VAR">global lista</field>
+                                          </block>
+                                        </value>
+                                        <value name="NUM">
+                                          <block type="lexical_variable_get" id="hdW2{Ot;?ouNa61PUPQ~">
+                                            <field name="VAR">global n</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="NOTFOUND">
+                                      <block type="text" id="{z.8lbdd)KZg=KCcftVe">
+                                        <field name="TEXT">not found</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="component_set_get" id="d6xyaDK#u!gpBx[JlYHG">
+                                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label7"></mutation>
+                                    <field name="COMPONENT_SELECTOR">Label7</field>
+                                    <field name="PROP">Text</field>
+                                    <value name="VALUE">
+                                      <block type="lists_lookup_in_pairs" id="IGG6h*!)g.S1B^4lf%JJ">
+                                        <value name="KEY">
+                                          <block type="text" id="ppOUv;QaKuG48Q?ltioE">
+                                            <field name="TEXT">Longitud</field>
+                                          </block>
+                                        </value>
+                                        <value name="LIST">
+                                          <block type="lists_select_item" id="%nMSEf_m*R;B}aAza?=^">
+                                            <value name="LIST">
+                                              <block type="lexical_variable_get" id="OT-6sS^#iBwb:39EcEA~">
+                                                <field name="VAR">global lista</field>
+                                              </block>
+                                            </value>
+                                            <value name="NUM">
+                                              <block type="lexical_variable_get" id="H8ru-9c.:9o(|{6P;,x%">
+                                                <field name="VAR">global n</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="NOTFOUND">
+                                          <block type="text" id="fAgAW%_G=}RH-`jv.Lof">
+                                            <field name="TEXT">not found</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="component_set_get" id="/cg+X]C!7azTp/u~Kjv8">
+                                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label8"></mutation>
+                                        <field name="COMPONENT_SELECTOR">Label8</field>
+                                        <field name="PROP">Text</field>
+                                        <value name="VALUE">
+                                          <block type="lists_lookup_in_pairs" id="xmN:~n=uU~z{GZIxf1F=">
+                                            <value name="KEY">
+                                              <block type="text" id="s,kb-%xVr{-vO5Kk]8N)">
+                                                <field name="TEXT">Unidad</field>
+                                              </block>
+                                            </value>
+                                            <value name="LIST">
+                                              <block type="lists_select_item" id="FWT.l,E?(SWgSGuY^QjD">
+                                                <value name="LIST">
+                                                  <block type="lexical_variable_get" id="YceVA7%#fZZK9i(MOt-@">
+                                                    <field name="VAR">global lista</field>
+                                                  </block>
+                                                </value>
+                                                <value name="NUM">
+                                                  <block type="lexical_variable_get" id="A6uVsK`.v~Dy=_+,5F6@">
+                                                    <field name="VAR">global n</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="NOTFOUND">
+                                              <block type="text" id="^nIY@z^ydEjb;Hph:@@F">
+                                                <field name="TEXT">not found</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="component_set_get" id="CY3@P?g.1samO4(#P#tN">
+                                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label9"></mutation>
+                                            <field name="COMPONENT_SELECTOR">Label9</field>
+                                            <field name="PROP">Text</field>
+                                            <value name="VALUE">
+                                              <block type="lists_lookup_in_pairs" id="r=DUr)dVC`RkgKtVs*I6">
+                                                <value name="KEY">
+                                                  <block type="text" id="J?99,0IR}:qXp@2X`07V">
+                                                    <field name="TEXT">Id_medicion</field>
+                                                  </block>
+                                                </value>
+                                                <value name="LIST">
+                                                  <block type="lists_select_item" id="33kS-L`W-$%9D7%+l;UJ">
+                                                    <value name="LIST">
+                                                      <block type="lexical_variable_get" id="EL+9YfY2+wGVKmDv,`gy">
+                                                        <field name="VAR">global lista</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="NUM">
+                                                      <block type="lexical_variable_get" id="FKIx0CgZw8+#W3wCF{eb">
+                                                        <field name="VAR">global n</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="NOTFOUND">
+                                                  <block type="text" id="durroil_|bn|PZ}*vIIE">
+                                                    <field name="TEXT">not found</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="component_set_get" id="D(_j)^jwSF)1OM.YWsk)">
+                                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label19"></mutation>
+                                                <field name="COMPONENT_SELECTOR">Label19</field>
+                                                <field name="PROP">Text</field>
+                                                <value name="VALUE">
+                                                  <block type="text" id="J$ame;^To(OSks}dmbs~">
+                                                    <field name="TEXT">Ubicacion</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="176" language-version="23"></yacodeblocks>
+</xml>
